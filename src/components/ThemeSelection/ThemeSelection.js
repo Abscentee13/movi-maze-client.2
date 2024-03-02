@@ -62,7 +62,7 @@ const ThemeSelection = () => {
 
 
     return (
-            <FormGroup>
+            <FormGroup style={{ display: 'flex', justifyContent: 'center' }}>
                 <FormControlLabel
                     control={<MaterialUISwitch sx={{ m: 1 }}   />}
                     checked={!checked}

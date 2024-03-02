@@ -18,11 +18,13 @@ const LogoCard = () => {
                     грай-рушай
                 </Typography>
             </div>
-            <div className={css.settingItem}>
-                <ThemeSelection />
-            </div>
-            <div className={css.settingItem}>
-                <LanguageSwitcher />
+            <div className={css.switchers}>
+                <div className={css.settingItem}>
+                    <ThemeSelection />
+                </div>
+                <div className={css.settingItem}>
+                    <LanguageSwitcher />
+                </div>
             </div>
         </div>
     );
