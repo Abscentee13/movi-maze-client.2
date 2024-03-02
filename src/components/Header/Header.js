@@ -2,7 +2,7 @@ import {Typography} from '@mui/material';
 
 import css from './Header.module.css';
 
-import {GenreList, LogoCard, UserInfo} from '../../components';
+import {GenreList, LogoCard, MainMenu, UserInfo} from '../../components';
 
 
 import React, {useContext} from 'react';
@@ -28,16 +28,9 @@ return(
                             </Typography>
                     </div>
                 <div>
-                    <nav>
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/games">Games</Link></li>
-                        </ul>
-                    </nav>
+                    <MainMenu />
                 </div>
-                    <div className={css.headerMenu}>
-                        <GenreList />
-                    </div>
+
             </div>
 
             <div className={css.headerProfile}>

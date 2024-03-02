@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import css from './MoviesPage.module.css';
@@ -7,7 +7,7 @@ import { getMovies, getTotalMovies, getTotalPages } from "../store/reducers/movi
 import { fetchMovies } from '../store/reducers/movies/moviesActions';
 import {LanguageContext} from '../language/language-context';
 import {
-    Filter,
+    Filter, GenreList,
     MoviesListCard,
     MoviesPagination,
 } from '../components';
@@ -47,7 +47,12 @@ const MoviesPage = () => {
     return (
 
         <div className={css.moviesListPage}>
+            <div className={css.headerMenu}>
+                <GenreList />
+            </div>
+
             <div className={css.filterRow} >
+
 
                 <div>
                     {(language.language === 'uk-UA'? 'Загальна кількість фільмів у базі ': 'Total count movie in base ')}

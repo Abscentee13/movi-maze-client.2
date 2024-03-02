@@ -11,6 +11,9 @@ export {Header} from './Header/Header';
 export {Icon} from './Icon/Icon';
 export {LanguageSwitcher} from './LanguageSwitcher/LanguageSwitcher';
 export {LogoCard} from './LogoCard/LogoCard';
+export {MainMenu} from './MainMenu/MainMenu';
+
+
 export {MovieDetails} from './MovieDetails/MovieDetails';
 export {MoviesListCard} from './MoviesListCard/MoviesListCard';
 export {MoviesPagination} from './MoviesPagination/MoviesPagination';

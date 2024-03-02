@@ -29,7 +29,6 @@ const GenreList = () => {
                     <Button key={genre.id} style={{ marginRight: '20px' }}>
                         <Icon name="inbox" />
                         {genre.name}
-                        {/*<Badge circle alert value={genre.id} />*/}
                     </Button>
                 ))}
             </div>
