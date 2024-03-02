@@ -4,6 +4,7 @@ export {AvatarImage} from './AvatarImage/AvatarImage';
 export {Badge} from './Badge/Badge';
 export {Button} from './Button/Button';
 export {Filter} from './Filter/Filter';
+export {GameCard} from './GameCard/GameCard';
 export {GenreBadge} from './GenreBadge/GenreBadge';
 export {GenreList} from './GenreList/GenreList';
 export {Header} from './Header/Header';
@@ -13,7 +14,12 @@ export {LogoCard} from './LogoCard/LogoCard';
 export {MovieDetails} from './MovieDetails/MovieDetails';
 export {MoviesListCard} from './MoviesListCard/MoviesListCard';
 export {MoviesPagination} from './MoviesPagination/MoviesPagination';
+export {RightSidebar} from './RightSidebar/RightSidebar';
 export {Sidebar} from './Sidebar/Sidebar';
 export {StarsRating} from './StarsRating/StarsRating';
+
 export {ThemeSelection} from './ThemeSelection/ThemeSelection';
 export {UserInfo} from './UserInfo/UserInfo';
+export {UserList} from './UserList/UserList';
+export {UserRoleName} from './UserRoleName/UserRoleName';
+

@@ -5,8 +5,9 @@ import css from './Header.module.css';
 import {GenreList, LogoCard, UserInfo} from '../../components';
 
 
-import {useContext} from 'react';
+import React, {useContext} from 'react';
 import {ThemeContext} from '../../themes/theme-context';
+import {Link} from "react-router-dom";
 
 
 const Header = () =>{
@@ -17,6 +18,7 @@ return(
 
             <div className={css.headerLogo}>
                 <LogoCard />
+
             </div>
 
             <div className={css.headerMid}>
@@ -25,6 +27,14 @@ return(
                                 MOVE MAZE
                             </Typography>
                     </div>
+                <div>
+                    <nav>
+                        <ul>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/games">Games</Link></li>
+                        </ul>
+                    </nav>
+                </div>
                     <div className={css.headerMenu}>
                         <GenreList />
                     </div>

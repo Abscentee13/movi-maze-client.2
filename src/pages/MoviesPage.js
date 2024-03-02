@@ -10,7 +10,7 @@ import {
     Filter,
     MoviesListCard,
     MoviesPagination,
-    } from '../components';
+} from '../components';
 
 
 
@@ -65,7 +65,7 @@ const MoviesPage = () => {
 
             <div className={css.moviesListBlock}>
                 {movies.map(movie => (
-                                     <MoviesListCard key = {movie.id} movie = {movie}/>
+                    <MoviesListCard key = {movie.id} movie = {movie}/>
                 ))}
             </div>
 

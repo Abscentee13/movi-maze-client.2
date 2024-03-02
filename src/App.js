@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {Navigate, Route, Routes} from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -10,12 +10,12 @@ import { CssBaseline } from '@material-ui/core';
 import css from './App.module.css';
 
 import { MainLayout } from './layouts';
-import {Header, MovieDetails, Sidebar} from './components';
+import {Header, MovieDetails, RightSidebar, Sidebar} from './components';
 import { ThemeContext } from './themes/theme-context';
 import { lightTheme, darkTheme } from './themes/theme';
 
 import { LanguageProvider } from './language/language-context';
-import config from './config';
+import {GameLayout} from "./layouts/GameLayout";
 
 const App = () => {
 
@@ -25,6 +25,8 @@ const App = () => {
             setTheme(theme === lightTheme ? darkTheme : lightTheme);
         };
 
+
+
     return (
         <Provider store={store}>
             <LanguageProvider>
@@ -33,13 +35,18 @@ const App = () => {
                     <CssBaseline />
                     <Header />
                     <div className={css.mainContainer}>
-                        <Sidebar />
+                        <RightSidebar />
                     <Routes>
                         <Route index element={ <Navigate to={'home'} /> } />
                         <Route path={'home'} element={<MainLayout/>}/>
+                        <Route index element={ <Navigate to={'home'} /> } />
+                        <Route path={'games'} element={<GameLayout/>}/>
+
                         <Route index element={ <Navigate to={'movie-details'} /> } />
                         <Route path={'movie-details'} element={<MovieDetails/>}/>
                     </Routes>
+
+                        <Sidebar />
                     </div>
                 </ThemeProvider>
                 </ThemeContext.Provider>

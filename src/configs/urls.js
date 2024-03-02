@@ -1,18 +1,9 @@
 const API_KEY = "c4afbfa3afc24cd4799e5c009de0e848";
 
-export const requests = {
-
-};
-
-// https://api.themoviedb.org/3/movie/157336?api_key={api_key}
-//     https://api.themoviedb.org/3/movie/157336/videos?api_key={api_key}
-//https://api.themoviedb.org/3/movie/5/lists?api_key=c4afbfa3afc24cd4799e5c009de0e848&language=en-US&page=1
-//https://api.themoviedb.org/3/discover/movie?api_key=c4afbfa3afc24cd4799e5c009de0e848&language=en-US&page=5
-
-
-////https://api.themoviedb.org/3/discover/movie?api_key=c4afbfa3afc24cd4799e5c009de0e848
-
 const baseURL = 'https://api.themoviedb.org'
+const apiBaseURL = 'http://localhost:5000';
+const postersURL = '/images/posters/';
+
 
 const urls = {
     genres: '/3/genre/movie/list?',
@@ -22,12 +13,27 @@ const urls = {
     popular: '/movie/popular',
     topRated: '/movie/top_rated',
     upcoming: '/movie/upcoming',
+
+    users: {
+        all: '/api/users/getAll',
+        active: '/api/users/active'
+    },
+    games: {
+        all: '/api/games/getAll',
+        popular: '/api/games/popular',
+    }
 }
+
+
+
+
 
 
 // console.log(baseURL + urls.movies + API_KEY);
 export {
     baseURL,
+    apiBaseURL,
+    postersURL,
     urls,
     API_KEY
 };
