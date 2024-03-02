@@ -4,7 +4,7 @@ import {FormControlLabel, FormGroup, styled, Switch} from '@mui/material';
 
 import { ThemeContext } from '../../themes/theme-context';
 
-const ThemeSelection = () => {
+const ThemeSwitcher = () => {
     const { setTheme } = useContext(ThemeContext);
     const [checked, setChecked] = useState(false);
 
@@ -72,4 +72,4 @@ const ThemeSelection = () => {
     );
 }
 
-export {ThemeSelection};
+export {ThemeSwitcher};

@@ -1,26 +1,28 @@
-import React, {useContext} from 'react';
-
+// LogoCard.js
+import React, { useContext } from 'react';
 import css from './LogoCard.module.css';
-
-import {AvatarImage, LanguageSwitcher, ThemeSelection} from '../../components';
-import {Typography} from "@mui/material";
-import {ThemeContext} from "../../themes/theme-context";
+import { AvatarImage, LanguageSwitcher, ThemeSwitcher } from '../../components';
+import { Typography } from '@mui/material';
+import { ThemeContext } from '../../themes/theme-context';
 
 const LogoCard = () => {
-    const {theme} = useContext(ThemeContext);
+    const { theme } = useContext(ThemeContext);
 
-    return(
+    return (
         <div className={css.logoCard}>
-            <AvatarImage avatarUrl = {'images/move-maze-logo.png'} />
+            <AvatarImage avatarUrl={'images/move-maze-logo.png'} />
             <div className={css.logoCardText}>
-                <Typography  component={theme.components.MuiTypography.defaultProps.variantMapping.subtitle1} color={theme.palette.primary.contrastText}>
-                    <br/>
+                <Typography
+                    component={theme.components.MuiTypography.defaultProps.variantMapping.subtitle1}
+                    color={theme.palette.primary.contrastText}
+                >
+                    <br />
                     грай-рушай
                 </Typography>
             </div>
             <div className={css.switchers}>
                 <div className={css.settingItem}>
-                    <ThemeSelection />
+                    <ThemeSwitcher />
                 </div>
                 <div className={css.settingItem}>
                     <LanguageSwitcher />
@@ -30,4 +32,4 @@ const LogoCard = () => {
     );
 };
 
-export {LogoCard};
+export { LogoCard };
